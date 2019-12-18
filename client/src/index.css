@@ -99,6 +99,21 @@ body {
   background-color: lightskyblue;
 }
 
+.home-button:hover {
+  background: lightgreen;
+  color: white;
+}
+
+.add-button {
+  padding: 5px 10px;
+  background: lightsalmon;
+}
+
+.add-button:hover {
+  background: lightpink;
+  color: white;
+}
+
 .movie-warning {
   color: red;
   text-align: center;
