@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const UpdateMovieForm = props => {
     const [movieInput, updateMovieInput] = useState({title: '', director: '', metascore: '', star0: '', star1: '', star2: ''});
@@ -25,8 +26,17 @@ const UpdateMovieForm = props => {
         starArray.push(movieInput.star0);
         starArray.push(movieInput.star1);
         starArray.push(movieInput.star2);
-        console.log(starArray);
-
+        //console.log(starArray);
+        const movieToSubmit = {title: movieInput.title, director: movieInput.director, metascore: movieInput.metascore, stars: starArray, id:props.match.params.id};
+        console.log(movieToSubmit);
+        console.log(props.match.params.id);
+        axios.put(`http://localhost:5000/api/movies/${props.match.params.id}`, movieToSubmit)
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     return (
