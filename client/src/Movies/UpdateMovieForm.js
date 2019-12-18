@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const UpdateMovieForm = props => {
     const [movieInput, updateMovieInput] = useState({title: '', director: '', metascore: '', star0: '', star1: '', star2: ''});
     
+    //console.log(props.location.state);
+    useEffect(()=> {
+        updateMovieInput({title: props.location.state.title, 
+           director: props.location.state.director,
+           metascore: props.location.state.metascore,
+           star0: props.location.state.stars[0],
+           star1: props.location.state.stars[1],
+           star2: props.location.state.stars[2]
+            })
+    }, [props.location.state]);
+
+
     const handleChange = e => {
         updateMovieInput({...movieInput, [e.target.name]: e.target.value});
     }
 
     const handleSubmit = e => {
         e.preventDefault();
+        const starArray = [];
+        starArray.push(movieInput.star0);
+        starArray.push(movieInput.star1);
+        starArray.push(movieInput.star2);
+        console.log(starArray);
 
     }
 

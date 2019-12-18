@@ -34,7 +34,7 @@ export default class Movie extends React.Component {
   editMovie = () => {
     //Routes user to /update-movie/:id
     console.log('Time to edit movie ' + this.state.movie.id);
-    this.props.history.push(`/update-movie/${this.state.movie.id}`);
+    this.props.history.push(`/update-movie/${this.state.movie.id}`, this.state.movie);
   }
 
   render() {
