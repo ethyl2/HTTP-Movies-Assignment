@@ -1,0 +1,43 @@
+import React, { useState } from 'react';
+
+const UpdateMovieForm = props => {
+    const [movieInput, updateMovieInput] = useState({title: '', director: '', metascore: '', star0: '', star1: '', star2: ''});
+    
+    const handleChange = e => {
+        updateMovieInput({...movieInput, [e.target.name]: e.target.value});
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+    }
+
+    return (
+        <div>
+            <h2>Edit Movie</h2>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor='title'>Title: </label>
+                <input type='text' name='title' value={movieInput.title} onChange={handleChange} /><br />
+
+                <label htmlFor='director'>Director: </label>
+                <input type='text' name='director' value={movieInput.director} onChange={handleChange} /><br />
+
+                <label htmlFor='metascore'>Metascore: </label>
+                <input type='number' name='metascore' value={movieInput.metascore} onChange={handleChange} /><br />
+            
+                <label htmlFor='star0'>Star: </label>
+                <input type='text' name='star0' value={movieInput.star0} onChange={handleChange} /><br />
+
+                <label htmlFor='star1'>Star: </label>
+                <input type='text' name='star1' value={movieInput.star1} onChange={handleChange} /><br />
+
+                <label htmlFor='star2'>Star: </label>
+                <input type='text' name='star2' value={movieInput.star2} onChange={handleChange} /><br />
+
+                <button type='submit'>Submit Changes</button>
+            </form>
+        </div>
+    )
+}
+
+export default UpdateMovieForm;
