@@ -33,6 +33,8 @@ const UpdateMovieForm = props => {
         axios.put(`http://localhost:5000/api/movies/${props.match.params.id}`, movieToSubmit)
             .then(res => {
                 console.log(res);
+                updateMovieInput({title: '', director: '', metascore: '', star0: '', star1: '', star2: ''});
+                props.history.push('/');
             })
             .catch(err => {
                 console.log(err);
