@@ -1,19 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Oswald&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background-color: #f2f2f2;
+  background-image: url('./images/theater.jpg');
+  background-size: cover;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Berkshire Swash', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 70%;
+  margin: 0.5rem auto;
+  border: none;
+  line-height: 1.5rem;
+  padding: 0.25rem;
+}
+
+label {
+  text-align: center;
+}
+
+form button {
+  width: 5rem;
+  background-color: #075C74;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+form button:hover {
+  background: #031826;
+}
+
+h2 {
+  color: #B10511;
+  text-align: center;
 }
 
 .movie-card {
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
   border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+  width: 45%;
 }
 
 .movie-director {
@@ -22,7 +81,7 @@ body {
 }
 
 .saved-list {
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
@@ -52,6 +111,7 @@ body {
   position: relative;
   width: 75%;
   margin: 1rem auto;
+  background: rgba(255, 255, 255, 0.8);
 }
 .save-button {
   position: absolute;
