@@ -15,6 +15,7 @@ const App = () => {
 
   return (
     <>
+      <h1 className='appTitle'>My Movies</h1>
       <SavedList list={savedList} />
       <Route exact path="/" component={MovieList} />
       <Route

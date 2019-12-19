@@ -19,6 +19,10 @@ h1, h2, h3 {
   font-family: 'Berkshire Swash', cursive;
 }
 
+.appTitle {
+  color: white;
+  text-align: center;
+}
 a {
   text-decoration: none;
   color: black;
