@@ -23,6 +23,7 @@ h1, h2, h3 {
   color: white;
   text-align: center;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -161,6 +162,7 @@ h2 {
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+  border: 1px solid grey;
 }
 
 .home-button:hover {
@@ -171,6 +173,7 @@ h2 {
 .add-button {
   padding: 5px 10px;
   background: lightsalmon;
+  border: 1px solid grey;
 }
 
 .add-button:hover {
